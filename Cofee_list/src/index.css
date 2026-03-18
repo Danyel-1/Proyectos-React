@@ -1,0 +1,157 @@
+/*Generales*/
+html{
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+body{
+    background-image: url('/src/imgs/bg-cafe.jpg');
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #111315;
+    color: #FEF7EE;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+h4{
+    margin:auto 5px;
+}
+
+article{
+    width: 200px;
+    margin: 0 auto;
+}
+
+figcaption{
+    display: flex;
+}
+
+p{
+    color: #6F757C;
+    z-index: 3;
+    position: static;
+    margin-left: 5px;
+}
+
+img{
+    z-index: 1;
+    width: 100%;
+    max-width: 190px;
+    border-radius: 1rem;
+    position:absolute;
+}
+
+/* Clases*/
+.head{
+    text-align: center;
+    padding-top: 3rem;
+    width: 55%;
+    margin: 0 auto;
+}
+
+.cofee-list{
+    width: 80%;
+    margin: 8rem auto;
+    background-color: #1B1D1F;
+    padding-bottom: 3rem;
+    border-radius: 1rem;
+}
+
+.grid-listado{
+    display: grid;
+    margin: 0 auto;
+    width: 80%;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.imagen-articulo{
+    height: 117px;
+}
+
+.popular{
+    color: #1B1D1F;
+    background-color: #F6C768 ;
+    padding: 2px;
+    text-align: center;
+    width: 3rem ;
+    border-radius: 1rem;
+    font-size: 10px;
+    position: relative;
+    top: .5rem;
+    left: .5rem;
+}
+
+.descripcion-articulo{
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.available{
+    color: #ED735D;
+    width: 4rem;
+    margin-bottom: -1rem;
+}
+
+.precio{
+    background-color: #BEE3CC ;
+    color: #111315;
+    padding: 5px;
+    border-radius: 1rem;
+    width: 3rem;
+}
+
+.botones{
+    text-align: center;
+    padding: 1rem;
+}
+
+button{
+    background-color: #1B1D1F;
+    color: #FEF7EE;
+    border-radius: 1rem;
+    border: none;
+    padding: 10px;
+    font-weight: 700;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.boton-activo{
+    background-color: #6F757C;
+}
+
+/* Cambio de tamano de pantalla */
+@media (max-width: 940px) {
+    body{
+        background-image: url('/src/imgs/bg-cafe.jpg');
+        background-repeat: no-repeat;
+    }
+
+    .grid-listado{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    body{
+        background-image: url('/src/imgs/bg-cafe-sm.jpg');
+        background-repeat: no-repeat;
+    }
+
+    .grid-listado{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
