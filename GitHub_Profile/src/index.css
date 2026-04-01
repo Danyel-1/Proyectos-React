@@ -1,0 +1,173 @@
+:root{
+  --cuerpo : #20293A;
+  --rojo: red;
+  --cartas:#111729;
+  --cartas_sombra:#1D1B48;
+  --color_letra:#CDD5E0;
+  --letra_tarjeta : #97A3B6;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+
+/*Generales----------------------------------------*/
+body{
+    background-color: var(--cuerpo);
+    background-image: url('/src/assets/hero-image-github-profile.jpg');
+    background-repeat: no-repeat;
+    color: var(--color_letra);
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+/*Buscador ----------------------------------------*/
+.buscador{
+    text-align: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+input{
+    padding-top: 2.5px;
+    padding-left: 1rem;
+    width: 50%;
+    color: var(--color_letra);
+    outline: none;
+}
+
+input,
+button{
+    height: 3rem;
+    border: none;
+    background-color: var(--cuerpo);
+    font-size: 1rem;
+    outline: none;
+    border-radius: 5px;
+}
+
+button{
+    padding-bottom: 2px;
+    margin-right: -8px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+
+
+input::placeholder{
+    color: var(--color_letra);
+}
+
+/*Perfil de usuario ----------------------------------*/
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.imagen{
+    background-color: black;
+    border-radius: 1rem;
+}
+
+.avatar{
+    padding: .5rem;
+    background-color: var(--cuerpo);
+    border-radius: 10px;
+    width: 6rem;
+    height: 6rem;
+}
+
+.avatar > h1,
+.avatar > p{
+    width: 50rem;
+}
+
+.perfil{
+    margin: 7rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+}
+
+article{
+    align-content:center;
+    background-color: var(--cartas_sombra);
+    color: var(--color_letra);
+    border-radius: 1rem;
+    height: 2rem;
+    padding: 5px;
+    padding: 10px;
+}
+
+/*Repositorios -------------------*/
+.repositorios-grid{
+    width: 90%;
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+}
+
+.tarjeta{
+    background: linear-gradient(to right, var(--cartas), var(--cartas_sombra));
+    width: 100%;
+    padding: 0 10px;
+    font-size: 1rem;
+    border-radius: 1rem;
+}
+
+.tarjeta > p{
+    color: var(--letra_tarjeta);
+}
+
+.centro{
+    width: 50%;
+    background-color: var(--rojo);
+}
+
+/*Tarjetas de repositorio ---------------------------------*/
+.meta{
+    display: flex;
+}
+
+p > img{
+    width: 1.4rem;
+}
+
+.meta > p{
+    padding-right:1rem;
+}
+
+.botonMas{
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+/*Media Quarys ---------------------------------*/
+@media (max-width: 640px) {
+    body{
+        background-image: url('/src/assets/hero-image-github-profile-sm.jpg');
+        background-repeat: no-repeat;
+    }
+
+    .repositorios-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .perfil{
+        margin: 7rem 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    article{
+        display: block;
+    }
+}
