@@ -11,10 +11,13 @@ const Repositorios = ({repositorios}) => {
           .then((data) => {
             setRepos(data);
             console.log(data);
+            
           })
           .catch((error) => {
             console.log(error);
         });
+
+        setVisible(false);
     },[repositorios]);
 
     const cuatroInicial = (repos) => {

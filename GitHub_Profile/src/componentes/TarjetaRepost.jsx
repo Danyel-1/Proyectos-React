@@ -26,7 +26,7 @@ const TarjetaRepost = ({el}) => {
   }
     
   return (
-    <section className='tarjeta'>
+    <a href={el.html_url} target='_blank' className='tarjeta'>
       <h4>{el.name}</h4>
       <p>{el.description}</p>
       <div className="meta">
@@ -36,7 +36,7 @@ const TarjetaRepost = ({el}) => {
 
         <p>updated {formatoFecha(el.updated_at)} ago</p>
       </div>
-    </section>
+    </a>
   )
 }
 

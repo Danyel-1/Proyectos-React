@@ -13,6 +13,7 @@ const PerfilUsuario = ({name, followers, following, location, avatar, bio}) => {
         <p>{bio}</p>
       </section>
 
+      
       <article>Followers | {followers}</article>
       <article>Following | {following}</article>
       <article>Location | {location ? location : " "}</article>
